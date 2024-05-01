@@ -14,10 +14,17 @@
     <!-- 3x3 -->
     <div id="board"></div>
     <button id="try-again" style="display: none;">Try Again</button>
-    <button id="back-to-selection">Go Back to Game Selection</button>
-
-    <script src="script.js"></script>
+    <button id="back-to-selection" class="back-button">Go Back to Game Selection</button>
+        
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <p id="winner-message"></p>
+        </div>
+      </div>
+      
     <script src="tictactoe.js"></script>
+    <script src="tictactoe.css"></script>
     
 </body>
 </html>

@@ -161,11 +161,21 @@ function resetGame() {
 }
 
 function displayWinMessage(message) {
-    let winMessage = document.createElement("div");
-    winMessage.classList.add("win-message");
-    winMessage.innerText = message;
-    document.getElementById("board").appendChild(winMessage);
-    
+    let modal = document.getElementById("myModal");
+    let winnerMessage = document.getElementById("winner-message");
+    winnerMessage.innerText = message;
+    modal.style.display = "block";
     // Show the try again button
     document.getElementById("try-again").style.display = "block";
+
 }
+    // Get the close button element
+    var closeModalBtn = document.getElementById("closeModal");
+
+    // Add click event listener to the close button
+    closeModalBtn.addEventListener("click", function() {
+        // Get the modal element
+        var modal = document.getElementById("myModal");
+        // Hide the modal
+        modal.style.display = "none";
+    });
