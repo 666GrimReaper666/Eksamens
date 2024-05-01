@@ -37,9 +37,9 @@ let alienColumns = 3;
 let alienCount = 0; //number of aliens to defeat
 let alienVelocityX = 1; //alien moving speed
 
-//bullets
+//Šaušana
 let bulletArray = [];
-let bulletVelocityY = -10; //bullet moving speed
+let bulletVelocityY = -10; //Šaušanas ātrums
 
 let score = 0;
 let gameOver = false;
@@ -58,13 +58,12 @@ window.onload = function() {
     }
 
     alienImg = new Image();
-    alienImg.src = "./alien.png";
-    alienImg.src = "./alien-cyan.png";
-    alienImg.src = "./alien-magenta.png";
     alienImg.src = "./alien-yellow.png";
-    createAliens();
+    alienImg.onload = function() {
+        createAliens();
+        requestAnimationFrame(update);
+    };
 
-    requestAnimationFrame(update);
     document.addEventListener("keydown", moveShip);
     document.addEventListener("keyup", shoot);
 }
@@ -129,7 +128,7 @@ function update() {
         bulletArray.shift(); //removes the first element of the array
     }
 
-    //next level
+    //Nākošais līmenis
     if (alienCount == 0) {
         //increase the number of aliens in columns and rows by 1
         score += alienColumns * alienRows * 100; //bonus points :)
@@ -158,10 +157,10 @@ function moveShip(e) {
     }
 
     if (e.code == "ArrowLeft" && ship.x - shipVelocityX >= 0) {
-        ship.x -= shipVelocityX; //move left one tile
+        ship.x -= shipVelocityX; //Pa kreisi
     }
     else if (e.code == "ArrowRight" && ship.x + shipVelocityX + ship.width <= board.width) {
-        ship.x += shipVelocityX; //move right one tile
+        ship.x += shipVelocityX; //Pa labi
     }
 }
 
