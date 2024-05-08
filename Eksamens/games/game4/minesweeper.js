@@ -15,7 +15,7 @@ window.onload = function() {
     
       // Add event listener to "Try Again" button
     document.getElementById("try-again-button").addEventListener("click", function() {
-        window.location.reload(); // Reload the page
+        window.location.reload();
     });
 }
 
