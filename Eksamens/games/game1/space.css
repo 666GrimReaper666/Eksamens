@@ -2,7 +2,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     text-align: center;
 }
-#board {
+#board { 
     background-color: black;
 }
 
@@ -19,3 +19,20 @@ body {
 #backButton:hover {
     background-color: #45a049;
 }
+
+/* #tryAgainButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;  Adjust as needed 
+    display: inline-block; Ensure button is inline 
+    text-decoration: none;  Remove default link styling 
+}
+
+#tryAgainButton:hover {
+    background-color: #45a049;
+} */

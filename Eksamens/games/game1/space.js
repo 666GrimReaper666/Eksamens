@@ -1,7 +1,7 @@
 //board
 let tileSize = 36;
-let rows = 18;
-let columns = 18;
+let rows = 22;
+let columns = 34;
 
 let board;
 let boardWidth = tileSize * columns; // 36 * 18
@@ -35,7 +35,7 @@ let alienImg;
 let alienRows = 2;
 let alienColumns = 3;
 let alienCount = 0; //number of aliens to defeat
-let alienVelocityX = 1; //alien moving speed
+let alienVelocityX = 0.5; //alien moving speed
 
 //Šaušana
 let bulletArray = [];
